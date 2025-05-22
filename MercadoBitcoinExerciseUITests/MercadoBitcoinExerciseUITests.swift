@@ -1,41 +1,23 @@
-//
-//  MercadoBitcoinExerciseUITests.swift
-//  MercadoBitcoinExerciseUITests
-//
-//  Created by Alline Kobayashi on 22/05/2025.
-//
-
 import XCTest
 
 final class MercadoBitcoinExerciseUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testExchangeListAndDetailFlow() {
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+        
+        // Wait for the exchange list table to appear
+        let table = app.tables.firstMatch
+        XCTAssertTrue(table.waitForExistence(timeout: 5), "Exchange list table should appear")
+        
+        // Tap the first cell if it exists
+        let firstCell = table.cells.firstMatch
+        if firstCell.exists {
+            firstCell.tap()
+            // Wait for the detail view (assume navigation bar title or a label exists)
+            let detailNavBar = app.navigationBars.element(boundBy: 0)
+            XCTAssertTrue(detailNavBar.waitForExistence(timeout: 3), "Detail view should appear after tapping exchange cell")
+        } else {
+            XCTFail("No exchange cells found in the list")
         }
     }
 }

@@ -1,10 +1,3 @@
-//
-//  MercadoBitcoinExerciseUITestsLaunchTests.swift
-//  MercadoBitcoinExerciseUITests
-//
-//  Created by Alline Kobayashi on 22/05/2025.
-//
-
 import XCTest
 
 final class MercadoBitcoinExerciseUITestsLaunchTests: XCTestCase {
