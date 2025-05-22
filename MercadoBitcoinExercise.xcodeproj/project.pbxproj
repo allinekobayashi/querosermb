@@ -47,6 +47,13 @@
 		2F72E7832DDF75B30013E3CD /* MockExchanges.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F72E7742DDF75B30013E3CD /* MockExchanges.json */; };
 		2F72E7852DDF769B0013E3CD /* MockExchangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7842DDF769B0013E3CD /* MockExchangesView.swift */; };
 		2F8477092DDF816E00834D90 /* MockExchangeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8477082DDF816E00834D90 /* MockExchangeRouter.swift */; };
+		2F84770C2DDF91D000834D90 /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 2F84770B2DDF91D000834D90 /* InlineSnapshotTesting */; };
+		2F84770E2DDF91D000834D90 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 2F84770D2DDF91D000834D90 /* SnapshotTesting */; };
+		2F8477102DDF91D000834D90 /* SnapshotTestingCustomDump in Frameworks */ = {isa = PBXBuildFile; productRef = 2F84770F2DDF91D000834D90 /* SnapshotTestingCustomDump */; };
+		2F8477122DDF921F00834D90 /* ErrorViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8477112DDF921F00834D90 /* ErrorViewTests.swift */; };
+		2F8477142DDF93F300834D90 /* ExchangeDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8477132DDF93F300834D90 /* ExchangeDetailViewControllerTests.swift */; };
+		2F8477162DDF956500834D90 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8477152DDF956500834D90 /* ViewControllerTests.swift */; };
+		2F8477182DDF9A3300834D90 /* MockExchangePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8477172DDF9A3300834D90 /* MockExchangePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +118,10 @@
 		2F72E7742DDF75B30013E3CD /* MockExchanges.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockExchanges.json; sourceTree = "<group>"; };
 		2F72E7842DDF769B0013E3CD /* MockExchangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExchangesView.swift; sourceTree = "<group>"; };
 		2F8477082DDF816E00834D90 /* MockExchangeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExchangeRouter.swift; sourceTree = "<group>"; };
+		2F8477112DDF921F00834D90 /* ErrorViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewTests.swift; sourceTree = "<group>"; };
+		2F8477132DDF93F300834D90 /* ExchangeDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		2F8477152DDF956500834D90 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		2F8477172DDF9A3300834D90 /* MockExchangePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExchangePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8477102DDF91D000834D90 /* SnapshotTestingCustomDump in Frameworks */,
+				2F84770C2DDF91D000834D90 /* InlineSnapshotTesting in Frameworks */,
+				2F84770E2DDF91D000834D90 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +274,9 @@
 		2F72E7632DDF75B30013E3CD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2F8477112DDF921F00834D90 /* ErrorViewTests.swift */,
+				2F8477132DDF93F300834D90 /* ExchangeDetailViewControllerTests.swift */,
+				2F8477152DDF956500834D90 /* ViewControllerTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +312,7 @@
 				2F72E7712DDF75B30013E3CD /* MockURLSession.swift */,
 				2F72E7842DDF769B0013E3CD /* MockExchangesView.swift */,
 				2F8477082DDF816E00834D90 /* MockExchangeRouter.swift */,
+				2F8477172DDF9A3300834D90 /* MockExchangePresenter.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -342,6 +360,11 @@
 				2F217E482DDF3B21005E393D /* PBXTargetDependency */,
 			);
 			name = MercadoBitcoinExerciseTests;
+			packageProductDependencies = (
+				2F84770B2DDF91D000834D90 /* InlineSnapshotTesting */,
+				2F84770D2DDF91D000834D90 /* SnapshotTesting */,
+				2F84770F2DDF91D000834D90 /* SnapshotTestingCustomDump */,
+			);
 			productName = MercadoBitcoinExerciseTests;
 			productReference = 2F217E462DDF3B21005E393D /* MercadoBitcoinExerciseTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -396,6 +419,9 @@
 				Base,
 			);
 			mainGroup = 2F217E272DDF3B1F005E393D;
+			packageReferences = (
+				2F84770A2DDF91D000834D90 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 2F217E312DDF3B1F005E393D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -465,14 +491,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8477142DDF93F300834D90 /* ExchangeDetailViewControllerTests.swift in Sources */,
 				2F72E77B2DDF75B30013E3CD /* MockExchangeInteractor.swift in Sources */,
 				2F8477092DDF816E00834D90 /* MockExchangeRouter.swift in Sources */,
 				2F72E7772DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift in Sources */,
 				2F72E7782DDF75B30013E3CD /* ExchangeInteractorTests.swift in Sources */,
+				2F8477122DDF921F00834D90 /* ErrorViewTests.swift in Sources */,
 				2F72E77A2DDF75B30013E3CD /* MockConfigurationManager.swift in Sources */,
 				2F72E7792DDF75B30013E3CD /* ExchangeMapperTests.swift in Sources */,
 				2F72E77C2DDF75B30013E3CD /* MockExchangeMapper.swift in Sources */,
 				2F72E77F2DDF75B30013E3CD /* MockExchangesResponse.swift in Sources */,
+				2F8477162DDF956500834D90 /* ViewControllerTests.swift in Sources */,
 				2F72E77E2DDF75B30013E3CD /* MockExchangeService.swift in Sources */,
 				2F72E7822DDF75B30013E3CD /* ExchangeServiceTests.swift in Sources */,
 				2F217E4B2DDF3B21005E393D /* MercadoBitcoinExerciseTests.swift in Sources */,
@@ -481,6 +510,7 @@
 				2F72E7802DDF75B30013E3CD /* MockExchangeViewModelMapper.swift in Sources */,
 				2F72E7762DDF75B30013E3CD /* ExchangePresenterTests.swift in Sources */,
 				2F72E7812DDF75B30013E3CD /* MockURLSession.swift in Sources */,
+				2F8477182DDF9A3300834D90 /* MockExchangePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,6 +841,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2F84770A2DDF91D000834D90 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.18.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2F84770B2DDF91D000834D90 /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F84770A2DDF91D000834D90 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		2F84770D2DDF91D000834D90 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F84770A2DDF91D000834D90 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		2F84770F2DDF91D000834D90 /* SnapshotTestingCustomDump */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2F84770A2DDF91D000834D90 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTestingCustomDump;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F217E282DDF3B1F005E393D /* Project object */;
 }

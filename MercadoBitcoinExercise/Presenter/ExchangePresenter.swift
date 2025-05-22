@@ -26,27 +26,27 @@ final class ExchangePresenter: ExchangePresenterProtocol {
     }
     
     func viewDidLoad() {
-        //TODO: add tracking
+        // If needed, add tracking here
         view?.showLoading()
         fetchExchanges()
     }
     
     func didSelectExchange(_ exchange: ExchangeViewModel) {
-        //TODO: add tracking
+        // If needed, add tracking here
         if let viewController = view as? UIViewController {
             router.showExchangeDetail(exchange: exchange, from: viewController)
         }
     }
     
     func pullToRefresh() {
+        // If needed, add tracking here
         fetchExchanges(forceRefresh: true)
-        //TODO: add tracking
     }
     
     func onRetry() {
+        // If needed, add tracking here
         view?.showLoading()
         fetchExchanges()
-        //TODO: add tracking
     }
     
     func configure(with view: any ExchangesViewProtocol) {
