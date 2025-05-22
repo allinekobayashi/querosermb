@@ -1,0 +1,39 @@
+[
+  {
+      "exchange_id": "BINANCE",
+      "website": "https://www.binance.com/",
+      "name": "Binance",
+      "data_quote_start": "2017-12-18T00:00:00.0000000Z",
+      "data_quote_end": "2025-04-22T00:00:00.0000000Z",
+      "data_orderbook_start": "2017-12-18T00:00:00.0000000Z",
+      "data_orderbook_end": "2025-04-22T00:00:00.0000000Z",
+      "data_trade_start": "2017-07-14T00:00:00.0000000Z",
+      "data_trade_end": "2025-04-19T00:00:00.0000000Z",
+      "data_symbols_count": 2992,
+      "volume_1hrs_usd": 11343585.98,
+      "volume_1day_usd": 20807950466.26,
+      "volume_1mth_usd": 518052111531.11,
+      "rank": 2,
+      "integration_status": "INTEGRATED"
+  },
+  {
+    "exchange_id": "COINBASE",
+    "name": "Coinbase Pro",
+    "website": "https://pro.coinbase.com/",
+    "data_start": "2015-01-08",
+    "data_end": "2024-01-01",
+    "volume_1hrs_usd": 162753954.21,
+    "volume_1day_usd": null,
+    "volume_1mth_usd": null
+  },
+  {
+    "exchange_id": "KRAKEN",
+    "name": "Kraken",
+    "website": null,
+    "data_start": null,
+    "data_end": null,
+    "volume_1hrs_usd": null,
+    "volume_1day_usd": null,
+    "volume_1mth_usd": null
+  }
+]

@@ -1,0 +1,816 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F217E342DDF3B1F005E393D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E332DDF3B1F005E393D /* AppDelegate.swift */; };
+		2F217E362DDF3B1F005E393D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E352DDF3B1F005E393D /* SceneDelegate.swift */; };
+		2F217E382DDF3B1F005E393D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E372DDF3B1F005E393D /* ViewController.swift */; };
+		2F217E3D2DDF3B20005E393D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F217E3C2DDF3B20005E393D /* Assets.xcassets */; };
+		2F217E402DDF3B20005E393D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 2F217E3F2DDF3B20005E393D /* Base */; };
+		2F217E4B2DDF3B21005E393D /* MercadoBitcoinExerciseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E4A2DDF3B21005E393D /* MercadoBitcoinExerciseTests.swift */; };
+		2F217E552DDF3B21005E393D /* MercadoBitcoinExerciseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E542DDF3B21005E393D /* MercadoBitcoinExerciseUITests.swift */; };
+		2F217E572DDF3B21005E393D /* MercadoBitcoinExerciseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E562DDF3B21005E393D /* MercadoBitcoinExerciseUITestsLaunchTests.swift */; };
+		2F217E762DDF3B95005E393D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E632DDF3B95005E393D /* ErrorView.swift */; };
+		2F217E772DDF3B95005E393D /* ExchangeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E642DDF3B95005E393D /* ExchangeDetailViewController.swift */; };
+		2F217E792DDF3B95005E393D /* ExchangeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E662DDF3B95005E393D /* ExchangeTableViewCell.swift */; };
+		2F217E7A2DDF3B95005E393D /* ExchangePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E682DDF3B95005E393D /* ExchangePresenter.swift */; };
+		2F217E7B2DDF3B95005E393D /* ExchangeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E692DDF3B95005E393D /* ExchangeViewModel.swift */; };
+		2F217E7C2DDF3B95005E393D /* ExchangeViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E6A2DDF3B95005E393D /* ExchangeViewModelMapper.swift */; };
+		2F217E7D2DDF3B95005E393D /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E6C2DDF3B95005E393D /* Exchange.swift */; };
+		2F217E7E2DDF3B95005E393D /* ExchangeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E6D2DDF3B95005E393D /* ExchangeInteractor.swift */; };
+		2F217E7F2DDF3B95005E393D /* ExchangeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E6E2DDF3B95005E393D /* ExchangeMapper.swift */; };
+		2F217E802DDF3B95005E393D /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E702DDF3B95005E393D /* ConfigurationManager.swift */; };
+		2F217E812DDF3B95005E393D /* ExchangeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E712DDF3B95005E393D /* ExchangeResponse.swift */; };
+		2F217E822DDF3B95005E393D /* ExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E722DDF3B95005E393D /* ExchangeService.swift */; };
+		2F217E832DDF3B95005E393D /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E732DDF3B95005E393D /* URLSessionProtocol.swift */; };
+		2F217E842DDF3B95005E393D /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F217E752DDF3B95005E393D /* Config.plist */; };
+		2F65A3082DDF7E9B00EE6C66 /* ExchangeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F65A3062DDF7E9B00EE6C66 /* ExchangeRouter.swift */; };
+		2F72E7622DDF74E20013E3CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F72E7612DDF74E20013E3CD /* Main.storyboard */; };
+		2F72E7762DDF75B30013E3CD /* ExchangePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7642DDF75B30013E3CD /* ExchangePresenterTests.swift */; };
+		2F72E7772DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7652DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift */; };
+		2F72E7782DDF75B30013E3CD /* ExchangeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7672DDF75B30013E3CD /* ExchangeInteractorTests.swift */; };
+		2F72E7792DDF75B30013E3CD /* ExchangeMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7682DDF75B30013E3CD /* ExchangeMapperTests.swift */; };
+		2F72E77A2DDF75B30013E3CD /* MockConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E76A2DDF75B30013E3CD /* MockConfigurationManager.swift */; };
+		2F72E77B2DDF75B30013E3CD /* MockExchangeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E76B2DDF75B30013E3CD /* MockExchangeInteractor.swift */; };
+		2F72E77C2DDF75B30013E3CD /* MockExchangeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E76C2DDF75B30013E3CD /* MockExchangeMapper.swift */; };
+		2F72E77D2DDF75B30013E3CD /* MockExchanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E76D2DDF75B30013E3CD /* MockExchanges.swift */; };
+		2F72E77E2DDF75B30013E3CD /* MockExchangeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E76E2DDF75B30013E3CD /* MockExchangeService.swift */; };
+		2F72E77F2DDF75B30013E3CD /* MockExchangesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E76F2DDF75B30013E3CD /* MockExchangesResponse.swift */; };
+		2F72E7802DDF75B30013E3CD /* MockExchangeViewModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7702DDF75B30013E3CD /* MockExchangeViewModelMapper.swift */; };
+		2F72E7812DDF75B30013E3CD /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7712DDF75B30013E3CD /* MockURLSession.swift */; };
+		2F72E7822DDF75B30013E3CD /* ExchangeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7732DDF75B30013E3CD /* ExchangeServiceTests.swift */; };
+		2F72E7832DDF75B30013E3CD /* MockExchanges.json in Resources */ = {isa = PBXBuildFile; fileRef = 2F72E7742DDF75B30013E3CD /* MockExchanges.json */; };
+		2F72E7852DDF769B0013E3CD /* MockExchangesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7842DDF769B0013E3CD /* MockExchangesView.swift */; };
+		2F8477092DDF816E00834D90 /* MockExchangeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8477082DDF816E00834D90 /* MockExchangeRouter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F217E472DDF3B21005E393D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F217E282DDF3B1F005E393D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F217E2F2DDF3B1F005E393D;
+			remoteInfo = MercadoBitcoinExercise;
+		};
+		2F217E512DDF3B21005E393D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F217E282DDF3B1F005E393D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F217E2F2DDF3B1F005E393D;
+			remoteInfo = MercadoBitcoinExercise;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F217E302DDF3B1F005E393D /* MercadoBitcoinExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoBitcoinExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F217E332DDF3B1F005E393D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2F217E352DDF3B1F005E393D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2F217E372DDF3B1F005E393D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F217E3C2DDF3B20005E393D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2F217E3F2DDF3B20005E393D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2F217E412DDF3B20005E393D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F217E462DDF3B21005E393D /* MercadoBitcoinExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoBitcoinExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F217E4A2DDF3B21005E393D /* MercadoBitcoinExerciseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoBitcoinExerciseTests.swift; sourceTree = "<group>"; };
+		2F217E502DDF3B21005E393D /* MercadoBitcoinExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercadoBitcoinExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F217E542DDF3B21005E393D /* MercadoBitcoinExerciseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoBitcoinExerciseUITests.swift; sourceTree = "<group>"; };
+		2F217E562DDF3B21005E393D /* MercadoBitcoinExerciseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercadoBitcoinExerciseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F217E632DDF3B95005E393D /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		2F217E642DDF3B95005E393D /* ExchangeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeDetailViewController.swift; sourceTree = "<group>"; };
+		2F217E662DDF3B95005E393D /* ExchangeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeTableViewCell.swift; sourceTree = "<group>"; };
+		2F217E682DDF3B95005E393D /* ExchangePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangePresenter.swift; sourceTree = "<group>"; };
+		2F217E692DDF3B95005E393D /* ExchangeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeViewModel.swift; sourceTree = "<group>"; };
+		2F217E6A2DDF3B95005E393D /* ExchangeViewModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeViewModelMapper.swift; sourceTree = "<group>"; };
+		2F217E6C2DDF3B95005E393D /* Exchange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
+		2F217E6D2DDF3B95005E393D /* ExchangeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeInteractor.swift; sourceTree = "<group>"; };
+		2F217E6E2DDF3B95005E393D /* ExchangeMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeMapper.swift; sourceTree = "<group>"; };
+		2F217E702DDF3B95005E393D /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		2F217E712DDF3B95005E393D /* ExchangeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeResponse.swift; sourceTree = "<group>"; };
+		2F217E722DDF3B95005E393D /* ExchangeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeService.swift; sourceTree = "<group>"; };
+		2F217E732DDF3B95005E393D /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		2F217E752DDF3B95005E393D /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		2F65A3062DDF7E9B00EE6C66 /* ExchangeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRouter.swift; sourceTree = "<group>"; };
+		2F72E7612DDF74E20013E3CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
+		2F72E7642DDF75B30013E3CD /* ExchangePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangePresenterTests.swift; sourceTree = "<group>"; };
+		2F72E7652DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeViewModelMapperTests.swift; sourceTree = "<group>"; };
+		2F72E7672DDF75B30013E3CD /* ExchangeInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeInteractorTests.swift; sourceTree = "<group>"; };
+		2F72E7682DDF75B30013E3CD /* ExchangeMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeMapperTests.swift; sourceTree = "<group>"; };
+		2F72E76A2DDF75B30013E3CD /* MockConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockConfigurationManager.swift; sourceTree = "<group>"; };
+		2F72E76B2DDF75B30013E3CD /* MockExchangeInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExchangeInteractor.swift; sourceTree = "<group>"; };
+		2F72E76C2DDF75B30013E3CD /* MockExchangeMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExchangeMapper.swift; sourceTree = "<group>"; };
+		2F72E76D2DDF75B30013E3CD /* MockExchanges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExchanges.swift; sourceTree = "<group>"; };
+		2F72E76E2DDF75B30013E3CD /* MockExchangeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExchangeService.swift; sourceTree = "<group>"; };
+		2F72E76F2DDF75B30013E3CD /* MockExchangesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExchangesResponse.swift; sourceTree = "<group>"; };
+		2F72E7702DDF75B30013E3CD /* MockExchangeViewModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExchangeViewModelMapper.swift; sourceTree = "<group>"; };
+		2F72E7712DDF75B30013E3CD /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		2F72E7732DDF75B30013E3CD /* ExchangeServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeServiceTests.swift; sourceTree = "<group>"; };
+		2F72E7742DDF75B30013E3CD /* MockExchanges.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockExchanges.json; sourceTree = "<group>"; };
+		2F72E7842DDF769B0013E3CD /* MockExchangesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockExchangesView.swift; sourceTree = "<group>"; };
+		2F8477082DDF816E00834D90 /* MockExchangeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockExchangeRouter.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2F217E2D2DDF3B1F005E393D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F217E432DDF3B21005E393D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F217E4D2DDF3B21005E393D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F217E272DDF3B1F005E393D = {
+			isa = PBXGroup;
+			children = (
+				2F217E322DDF3B1F005E393D /* MercadoBitcoinExercise */,
+				2F217E492DDF3B21005E393D /* MercadoBitcoinExerciseTests */,
+				2F217E532DDF3B21005E393D /* MercadoBitcoinExerciseUITests */,
+				2F217E312DDF3B1F005E393D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2F217E312DDF3B1F005E393D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2F217E302DDF3B1F005E393D /* MercadoBitcoinExercise.app */,
+				2F217E462DDF3B21005E393D /* MercadoBitcoinExerciseTests.xctest */,
+				2F217E502DDF3B21005E393D /* MercadoBitcoinExerciseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2F217E322DDF3B1F005E393D /* MercadoBitcoinExercise */ = {
+			isa = PBXGroup;
+			children = (
+				2F217E852DDF3B9C005E393D /* Config */,
+				2F217E742DDF3B95005E393D /* Service */,
+				2F217E6F2DDF3B95005E393D /* Interactor */,
+				2F217E6B2DDF3B95005E393D /* Presenter */,
+				2F65A3072DDF7E9B00EE6C66 /* Router */,
+				2F217E672DDF3B95005E393D /* View */,
+				2F217E332DDF3B1F005E393D /* AppDelegate.swift */,
+				2F217E352DDF3B1F005E393D /* SceneDelegate.swift */,
+				2F217E372DDF3B1F005E393D /* ViewController.swift */,
+				2F217E3C2DDF3B20005E393D /* Assets.xcassets */,
+				2F217E3E2DDF3B20005E393D /* LaunchScreen.storyboard */,
+				2F72E7612DDF74E20013E3CD /* Main.storyboard */,
+				2F217E412DDF3B20005E393D /* Info.plist */,
+			);
+			path = MercadoBitcoinExercise;
+			sourceTree = "<group>";
+		};
+		2F217E492DDF3B21005E393D /* MercadoBitcoinExerciseTests */ = {
+			isa = PBXGroup;
+			children = (
+				2F72E7692DDF75B30013E3CD /* Interactor */,
+				2F72E7722DDF75B30013E3CD /* Mocks */,
+				2F72E7662DDF75B30013E3CD /* Presenter */,
+				2F72E7752DDF75B30013E3CD /* Service */,
+				2F72E7632DDF75B30013E3CD /* View */,
+				2F217E4A2DDF3B21005E393D /* MercadoBitcoinExerciseTests.swift */,
+			);
+			path = MercadoBitcoinExerciseTests;
+			sourceTree = "<group>";
+		};
+		2F217E532DDF3B21005E393D /* MercadoBitcoinExerciseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F217E542DDF3B21005E393D /* MercadoBitcoinExerciseUITests.swift */,
+				2F217E562DDF3B21005E393D /* MercadoBitcoinExerciseUITestsLaunchTests.swift */,
+			);
+			path = MercadoBitcoinExerciseUITests;
+			sourceTree = "<group>";
+		};
+		2F217E672DDF3B95005E393D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F217E632DDF3B95005E393D /* ErrorView.swift */,
+				2F217E642DDF3B95005E393D /* ExchangeDetailViewController.swift */,
+				2F217E662DDF3B95005E393D /* ExchangeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F217E6B2DDF3B95005E393D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2F217E682DDF3B95005E393D /* ExchangePresenter.swift */,
+				2F217E692DDF3B95005E393D /* ExchangeViewModel.swift */,
+				2F217E6A2DDF3B95005E393D /* ExchangeViewModelMapper.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2F217E6F2DDF3B95005E393D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2F217E6C2DDF3B95005E393D /* Exchange.swift */,
+				2F217E6D2DDF3B95005E393D /* ExchangeInteractor.swift */,
+				2F217E6E2DDF3B95005E393D /* ExchangeMapper.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2F217E742DDF3B95005E393D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2F217E712DDF3B95005E393D /* ExchangeResponse.swift */,
+				2F217E722DDF3B95005E393D /* ExchangeService.swift */,
+				2F217E732DDF3B95005E393D /* URLSessionProtocol.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2F217E852DDF3B9C005E393D /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2F217E752DDF3B95005E393D /* Config.plist */,
+				2F217E702DDF3B95005E393D /* ConfigurationManager.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		2F65A3072DDF7E9B00EE6C66 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2F65A3062DDF7E9B00EE6C66 /* ExchangeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2F72E7632DDF75B30013E3CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F72E7662DDF75B30013E3CD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2F72E7642DDF75B30013E3CD /* ExchangePresenterTests.swift */,
+				2F72E7652DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2F72E7692DDF75B30013E3CD /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2F72E7672DDF75B30013E3CD /* ExchangeInteractorTests.swift */,
+				2F72E7682DDF75B30013E3CD /* ExchangeMapperTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2F72E7722DDF75B30013E3CD /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				2F72E76A2DDF75B30013E3CD /* MockConfigurationManager.swift */,
+				2F72E76B2DDF75B30013E3CD /* MockExchangeInteractor.swift */,
+				2F72E76C2DDF75B30013E3CD /* MockExchangeMapper.swift */,
+				2F72E76D2DDF75B30013E3CD /* MockExchanges.swift */,
+				2F72E76E2DDF75B30013E3CD /* MockExchangeService.swift */,
+				2F72E76F2DDF75B30013E3CD /* MockExchangesResponse.swift */,
+				2F72E7702DDF75B30013E3CD /* MockExchangeViewModelMapper.swift */,
+				2F72E7712DDF75B30013E3CD /* MockURLSession.swift */,
+				2F72E7842DDF769B0013E3CD /* MockExchangesView.swift */,
+				2F8477082DDF816E00834D90 /* MockExchangeRouter.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		2F72E7752DDF75B30013E3CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2F72E7732DDF75B30013E3CD /* ExchangeServiceTests.swift */,
+				2F72E7742DDF75B30013E3CD /* MockExchanges.json */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2F217E2F2DDF3B1F005E393D /* MercadoBitcoinExercise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F217E5A2DDF3B21005E393D /* Build configuration list for PBXNativeTarget "MercadoBitcoinExercise" */;
+			buildPhases = (
+				2F217E2C2DDF3B1F005E393D /* Sources */,
+				2F217E2D2DDF3B1F005E393D /* Frameworks */,
+				2F217E2E2DDF3B1F005E393D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MercadoBitcoinExercise;
+			productName = MercadoBitcoinExercise;
+			productReference = 2F217E302DDF3B1F005E393D /* MercadoBitcoinExercise.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2F217E452DDF3B21005E393D /* MercadoBitcoinExerciseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F217E5D2DDF3B21005E393D /* Build configuration list for PBXNativeTarget "MercadoBitcoinExerciseTests" */;
+			buildPhases = (
+				2F217E422DDF3B21005E393D /* Sources */,
+				2F217E432DDF3B21005E393D /* Frameworks */,
+				2F217E442DDF3B21005E393D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F217E482DDF3B21005E393D /* PBXTargetDependency */,
+			);
+			name = MercadoBitcoinExerciseTests;
+			productName = MercadoBitcoinExerciseTests;
+			productReference = 2F217E462DDF3B21005E393D /* MercadoBitcoinExerciseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2F217E4F2DDF3B21005E393D /* MercadoBitcoinExerciseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F217E602DDF3B21005E393D /* Build configuration list for PBXNativeTarget "MercadoBitcoinExerciseUITests" */;
+			buildPhases = (
+				2F217E4C2DDF3B21005E393D /* Sources */,
+				2F217E4D2DDF3B21005E393D /* Frameworks */,
+				2F217E4E2DDF3B21005E393D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F217E522DDF3B21005E393D /* PBXTargetDependency */,
+			);
+			name = MercadoBitcoinExerciseUITests;
+			productName = MercadoBitcoinExerciseUITests;
+			productReference = 2F217E502DDF3B21005E393D /* MercadoBitcoinExerciseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2F217E282DDF3B1F005E393D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					2F217E2F2DDF3B1F005E393D = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					2F217E452DDF3B21005E393D = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2F217E2F2DDF3B1F005E393D;
+					};
+					2F217E4F2DDF3B21005E393D = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2F217E2F2DDF3B1F005E393D;
+					};
+				};
+			};
+			buildConfigurationList = 2F217E2B2DDF3B1F005E393D /* Build configuration list for PBXProject "MercadoBitcoinExercise" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2F217E272DDF3B1F005E393D;
+			productRefGroup = 2F217E312DDF3B1F005E393D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2F217E2F2DDF3B1F005E393D /* MercadoBitcoinExercise */,
+				2F217E452DDF3B21005E393D /* MercadoBitcoinExerciseTests */,
+				2F217E4F2DDF3B21005E393D /* MercadoBitcoinExerciseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2F217E2E2DDF3B1F005E393D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F217E842DDF3B95005E393D /* Config.plist in Resources */,
+				2F217E3D2DDF3B20005E393D /* Assets.xcassets in Resources */,
+				2F217E402DDF3B20005E393D /* Base in Resources */,
+				2F72E7622DDF74E20013E3CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F217E442DDF3B21005E393D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F72E7832DDF75B30013E3CD /* MockExchanges.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F217E4E2DDF3B21005E393D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2F217E2C2DDF3B1F005E393D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F217E382DDF3B1F005E393D /* ViewController.swift in Sources */,
+				2F217E7B2DDF3B95005E393D /* ExchangeViewModel.swift in Sources */,
+				2F217E342DDF3B1F005E393D /* AppDelegate.swift in Sources */,
+				2F65A3082DDF7E9B00EE6C66 /* ExchangeRouter.swift in Sources */,
+				2F217E362DDF3B1F005E393D /* SceneDelegate.swift in Sources */,
+				2F217E822DDF3B95005E393D /* ExchangeService.swift in Sources */,
+				2F217E7F2DDF3B95005E393D /* ExchangeMapper.swift in Sources */,
+				2F217E7C2DDF3B95005E393D /* ExchangeViewModelMapper.swift in Sources */,
+				2F217E7D2DDF3B95005E393D /* Exchange.swift in Sources */,
+				2F217E832DDF3B95005E393D /* URLSessionProtocol.swift in Sources */,
+				2F217E792DDF3B95005E393D /* ExchangeTableViewCell.swift in Sources */,
+				2F217E762DDF3B95005E393D /* ErrorView.swift in Sources */,
+				2F217E7A2DDF3B95005E393D /* ExchangePresenter.swift in Sources */,
+				2F217E812DDF3B95005E393D /* ExchangeResponse.swift in Sources */,
+				2F217E802DDF3B95005E393D /* ConfigurationManager.swift in Sources */,
+				2F217E7E2DDF3B95005E393D /* ExchangeInteractor.swift in Sources */,
+				2F217E772DDF3B95005E393D /* ExchangeDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F217E422DDF3B21005E393D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F72E77B2DDF75B30013E3CD /* MockExchangeInteractor.swift in Sources */,
+				2F8477092DDF816E00834D90 /* MockExchangeRouter.swift in Sources */,
+				2F72E7772DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift in Sources */,
+				2F72E7782DDF75B30013E3CD /* ExchangeInteractorTests.swift in Sources */,
+				2F72E77A2DDF75B30013E3CD /* MockConfigurationManager.swift in Sources */,
+				2F72E7792DDF75B30013E3CD /* ExchangeMapperTests.swift in Sources */,
+				2F72E77C2DDF75B30013E3CD /* MockExchangeMapper.swift in Sources */,
+				2F72E77F2DDF75B30013E3CD /* MockExchangesResponse.swift in Sources */,
+				2F72E77E2DDF75B30013E3CD /* MockExchangeService.swift in Sources */,
+				2F72E7822DDF75B30013E3CD /* ExchangeServiceTests.swift in Sources */,
+				2F217E4B2DDF3B21005E393D /* MercadoBitcoinExerciseTests.swift in Sources */,
+				2F72E77D2DDF75B30013E3CD /* MockExchanges.swift in Sources */,
+				2F72E7852DDF769B0013E3CD /* MockExchangesView.swift in Sources */,
+				2F72E7802DDF75B30013E3CD /* MockExchangeViewModelMapper.swift in Sources */,
+				2F72E7762DDF75B30013E3CD /* ExchangePresenterTests.swift in Sources */,
+				2F72E7812DDF75B30013E3CD /* MockURLSession.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F217E4C2DDF3B21005E393D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F217E552DDF3B21005E393D /* MercadoBitcoinExerciseUITests.swift in Sources */,
+				2F217E572DDF3B21005E393D /* MercadoBitcoinExerciseUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F217E482DDF3B21005E393D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F217E2F2DDF3B1F005E393D /* MercadoBitcoinExercise */;
+			targetProxy = 2F217E472DDF3B21005E393D /* PBXContainerItemProxy */;
+		};
+		2F217E522DDF3B21005E393D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F217E2F2DDF3B1F005E393D /* MercadoBitcoinExercise */;
+			targetProxy = 2F217E512DDF3B21005E393D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2F217E3E2DDF3B20005E393D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F217E3F2DDF3B20005E393D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2F217E582DDF3B21005E393D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2F217E592DDF3B21005E393D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2F217E5B2DDF3B21005E393D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4P55MVJ74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MercadoBitcoinExercise/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = image.MercadoBitcoinExercise;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F217E5C2DDF3B21005E393D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4P55MVJ74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MercadoBitcoinExercise/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = image.MercadoBitcoinExercise;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2F217E5E2DDF3B21005E393D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4P55MVJ74;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = image.MercadoBitcoinExerciseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoBitcoinExercise.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MercadoBitcoinExercise";
+			};
+			name = Debug;
+		};
+		2F217E5F2DDF3B21005E393D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4P55MVJ74;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = image.MercadoBitcoinExerciseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MercadoBitcoinExercise.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MercadoBitcoinExercise";
+			};
+			name = Release;
+		};
+		2F217E612DDF3B21005E393D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4P55MVJ74;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = image.MercadoBitcoinExerciseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MercadoBitcoinExercise;
+			};
+			name = Debug;
+		};
+		2F217E622DDF3B21005E393D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X4P55MVJ74;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = image.MercadoBitcoinExerciseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MercadoBitcoinExercise;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2F217E2B2DDF3B1F005E393D /* Build configuration list for PBXProject "MercadoBitcoinExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F217E582DDF3B21005E393D /* Debug */,
+				2F217E592DDF3B21005E393D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F217E5A2DDF3B21005E393D /* Build configuration list for PBXNativeTarget "MercadoBitcoinExercise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F217E5B2DDF3B21005E393D /* Debug */,
+				2F217E5C2DDF3B21005E393D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F217E5D2DDF3B21005E393D /* Build configuration list for PBXNativeTarget "MercadoBitcoinExerciseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F217E5E2DDF3B21005E393D /* Debug */,
+				2F217E5F2DDF3B21005E393D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F217E602DDF3B21005E393D /* Build configuration list for PBXNativeTarget "MercadoBitcoinExerciseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F217E612DDF3B21005E393D /* Debug */,
+				2F217E622DDF3B21005E393D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2F217E282DDF3B1F005E393D /* Project object */;
+}
