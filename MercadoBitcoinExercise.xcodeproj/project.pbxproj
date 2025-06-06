@@ -30,7 +30,6 @@
 		2F217E832DDF3B95005E393D /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E732DDF3B95005E393D /* URLSessionProtocol.swift */; };
 		2F217E842DDF3B95005E393D /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F217E752DDF3B95005E393D /* Config.plist */; };
 		2F65A3082DDF7E9B00EE6C66 /* ExchangeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F65A3062DDF7E9B00EE6C66 /* ExchangeRouter.swift */; };
-		2F72E7622DDF74E20013E3CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F72E7612DDF74E20013E3CD /* Main.storyboard */; };
 		2F72E7762DDF75B30013E3CD /* ExchangePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7642DDF75B30013E3CD /* ExchangePresenterTests.swift */; };
 		2F72E7772DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7652DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift */; };
 		2F72E7782DDF75B30013E3CD /* ExchangeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72E7672DDF75B30013E3CD /* ExchangeInteractorTests.swift */; };
@@ -101,7 +100,6 @@
 		2F217E732DDF3B95005E393D /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		2F217E752DDF3B95005E393D /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		2F65A3062DDF7E9B00EE6C66 /* ExchangeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeRouter.swift; sourceTree = "<group>"; };
-		2F72E7612DDF74E20013E3CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../../.Trash/Main.storyboard; sourceTree = "<group>"; };
 		2F72E7642DDF75B30013E3CD /* ExchangePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangePresenterTests.swift; sourceTree = "<group>"; };
 		2F72E7652DDF75B30013E3CD /* ExchangeViewModelMapperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeViewModelMapperTests.swift; sourceTree = "<group>"; };
 		2F72E7672DDF75B30013E3CD /* ExchangeInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeInteractorTests.swift; sourceTree = "<group>"; };
@@ -186,7 +184,6 @@
 				2F217E372DDF3B1F005E393D /* ViewController.swift */,
 				2F217E3C2DDF3B20005E393D /* Assets.xcassets */,
 				2F217E3E2DDF3B20005E393D /* LaunchScreen.storyboard */,
-				2F72E7612DDF74E20013E3CD /* Main.storyboard */,
 				2F217E412DDF3B20005E393D /* Info.plist */,
 			);
 			path = MercadoBitcoinExercise;
@@ -441,7 +438,6 @@
 				2F217E842DDF3B95005E393D /* Config.plist in Resources */,
 				2F217E3D2DDF3B20005E393D /* Assets.xcassets in Resources */,
 				2F217E402DDF3B20005E393D /* Base in Resources */,
-				2F72E7622DDF74E20013E3CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +677,6 @@
 				INFOPLIST_FILE = MercadoBitcoinExercise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -709,7 +704,6 @@
 				INFOPLIST_FILE = MercadoBitcoinExercise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
