@@ -3,6 +3,8 @@ import UIKit
 
 protocol ExchangePresenterProtocol: AnyObject {
     func viewDidLoad()
+    func viewWillAppear()
+    func viewWillDisappear()
     func didSelectExchange(_ exchange: ExchangeViewModel)
     func configure(with view: ExchangesViewProtocol)
     func pullToRefresh()
@@ -13,16 +15,21 @@ final class ExchangePresenter: ExchangePresenterProtocol {
     private let interactor: ExchangeInteractorProtocol
     private let mapper: ExchangeViewModelMapperProtocol
     private let router: ExchangeRouterProtocol
+    private let timer: TimerProtocol
     weak var view: ExchangesViewProtocol?
+    
+    private let refreshInterval: TimeInterval = 60.0
     
     init(
         interactor: ExchangeInteractorProtocol,
         mapper: ExchangeViewModelMapperProtocol = ExchangeViewModelMapper(),
-        router: ExchangeRouterProtocol = ExchangeRouter()
+        router: ExchangeRouterProtocol = ExchangeRouter(),
+        timer: TimerProtocol = RealTimer()
     ) {
         self.interactor = interactor
         self.mapper = mapper
         self.router = router
+        self.timer = timer
     }
     
     func viewDidLoad() {
@@ -66,5 +73,19 @@ final class ExchangePresenter: ExchangePresenterProtocol {
                 }
             }
         }
+    }
+    
+    // MARK: - Auto refresh every 60s
+    
+    func viewWillAppear() {
+        timer.invalidate()
+        
+        timer.scheduledTimer(withTimeInterval: refreshInterval, repeats: true) { [weak self] in
+            self?.fetchExchanges()
+        }
+    }
+    
+    func viewWillDisappear() {
+        timer.invalidate()
     }
 }

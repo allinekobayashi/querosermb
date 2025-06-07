@@ -7,6 +7,7 @@ final class ExchangePresenterTests: XCTestCase {
     private var mockView: MockExchangesView!
     private var mockInteractor: MockExchangeInteractor!
     private var mockMapper: MockExchangeViewModelMapper!
+    private var mockTimer: MockTimer!
     
     private let expectedExchanges = ExchangeListViewModel(
         lastUpdated: "07/06/2025, 10:37",
@@ -32,11 +33,13 @@ final class ExchangePresenterTests: XCTestCase {
         mockView = MockExchangesView()
         mockInteractor = MockExchangeInteractor()
         mockMapper = MockExchangeViewModelMapper()
+        mockTimer = MockTimer()
         
         presenter = ExchangePresenter(
             interactor: mockInteractor,
             mapper: mockMapper,
-            router: mockRouter
+            router: mockRouter,
+            timer: mockTimer
         )
         
         presenter.configure(with: mockView)
@@ -108,6 +111,31 @@ final class ExchangePresenterTests: XCTestCase {
         
         await MainActor.run {
             XCTAssertTrue(mockView.showLoadingCalled)
+            XCTAssertTrue(mockInteractor.fetchExchangesCalled)
+            XCTAssertEqual(mockInteractor.forceRefresh, false)
+            XCTAssertEqual(mockView.viewModelPassed, expectedExchanges)
+            XCTAssertTrue(mockView.showExchangesCalled)
+        }
+    }
+    
+    func testViewWillAppearTimer() {
+        presenter.viewWillAppear()
+        
+        XCTAssertEqual(mockTimer.invalidateCallCount, 1)
+        XCTAssertEqual(mockTimer.scheduleCallCount, 1)
+        XCTAssertTrue(mockTimer.isRunning)    }
+    
+    func testViewWillAppearResponse() async {
+        mockMapper.mockMappedExchanges = expectedExchanges
+        mockInteractor.mockExchanges = mockExchanges
+        
+        presenter.viewWillAppear()
+        mockTimer.fire()
+        
+        try? await Task.sleep(nanoseconds: 100_000_000)
+        
+        await MainActor.run {
+            XCTAssertFalse(mockView.showLoadingCalled)
             XCTAssertTrue(mockInteractor.fetchExchangesCalled)
             XCTAssertEqual(mockInteractor.forceRefresh, false)
             XCTAssertEqual(mockView.viewModelPassed, expectedExchanges)

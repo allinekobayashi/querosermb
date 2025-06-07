@@ -8,6 +8,8 @@ final class MockExchangePresenter: ExchangePresenterProtocol {
     var didCallConfigureWithView: ExchangesViewProtocol?
     var didCallPullToRefresh = false
     var didCallOnRetry = false
+    var didCallViewWillAppear = false
+    var didCallViewWillDisappear = false
 
     func viewDidLoad() {
         didCallViewDidLoad = true
@@ -27,5 +29,13 @@ final class MockExchangePresenter: ExchangePresenterProtocol {
     
     func onRetry() {
         didCallOnRetry = true
+    }
+    
+    func viewWillAppear() {
+        didCallViewWillAppear = true
+    }
+    
+    func viewWillDisappear() {
+        didCallViewWillDisappear = true
     }
 }

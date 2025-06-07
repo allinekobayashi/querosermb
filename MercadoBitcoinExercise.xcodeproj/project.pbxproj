@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F1230A12DF48A64000E37C6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1230A02DF48A64000E37C6 /* Timer.swift */; };
+		2F1230A32DF48AA4000E37C6 /* MockTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1230A22DF48AA4000E37C6 /* MockTimer.swift */; };
 		2F217E342DDF3B1F005E393D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E332DDF3B1F005E393D /* AppDelegate.swift */; };
 		2F217E362DDF3B1F005E393D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E352DDF3B1F005E393D /* SceneDelegate.swift */; };
 		2F217E382DDF3B1F005E393D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F217E372DDF3B1F005E393D /* ViewController.swift */; };
@@ -73,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F1230A02DF48A64000E37C6 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		2F1230A22DF48AA4000E37C6 /* MockTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimer.swift; sourceTree = "<group>"; };
 		2F217E302DDF3B1F005E393D /* MercadoBitcoinExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercadoBitcoinExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F217E332DDF3B1F005E393D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F217E352DDF3B1F005E393D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 				2F217E682DDF3B95005E393D /* ExchangePresenter.swift */,
 				2F217E692DDF3B95005E393D /* ExchangeViewModel.swift */,
 				2F217E6A2DDF3B95005E393D /* ExchangeViewModelMapper.swift */,
+				2F1230A02DF48A64000E37C6 /* Timer.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				2F72E7842DDF769B0013E3CD /* MockExchangesView.swift */,
 				2F8477082DDF816E00834D90 /* MockExchangeRouter.swift */,
 				2F8477172DDF9A3300834D90 /* MockExchangePresenter.swift */,
+				2F1230A22DF48AA4000E37C6 /* MockTimer.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -478,6 +484,7 @@
 				2F217E7A2DDF3B95005E393D /* ExchangePresenter.swift in Sources */,
 				2F217E812DDF3B95005E393D /* ExchangeResponse.swift in Sources */,
 				2F217E802DDF3B95005E393D /* ConfigurationManager.swift in Sources */,
+				2F1230A12DF48A64000E37C6 /* Timer.swift in Sources */,
 				2F217E7E2DDF3B95005E393D /* ExchangeInteractor.swift in Sources */,
 				2F217E772DDF3B95005E393D /* ExchangeDetailViewController.swift in Sources */,
 			);
@@ -497,6 +504,7 @@
 				2F72E7792DDF75B30013E3CD /* ExchangeMapperTests.swift in Sources */,
 				2F72E77C2DDF75B30013E3CD /* MockExchangeMapper.swift in Sources */,
 				2F72E77F2DDF75B30013E3CD /* MockExchangesResponse.swift in Sources */,
+				2F1230A32DF48AA4000E37C6 /* MockTimer.swift in Sources */,
 				2F8477162DDF956500834D90 /* ViewControllerTests.swift in Sources */,
 				2F72E77E2DDF75B30013E3CD /* MockExchangeService.swift in Sources */,
 				2F72E7822DDF75B30013E3CD /* ExchangeServiceTests.swift in Sources */,
