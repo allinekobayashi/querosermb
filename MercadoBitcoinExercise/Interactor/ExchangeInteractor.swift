@@ -1,7 +1,7 @@
 import Foundation
 
 protocol ExchangeInteractorProtocol {
-    func fetchExchanges(forceRefresh: Bool) async throws -> [Exchange]
+    func fetchExchanges(forceRefresh: Bool) async throws -> ExchangeGroup
 }
 
 final class ExchangeInteractor: ExchangeInteractorProtocol {
@@ -13,7 +13,7 @@ final class ExchangeInteractor: ExchangeInteractorProtocol {
         self.mapper = mapper
     }
     
-    func fetchExchanges(forceRefresh: Bool) async throws -> [Exchange] {
+    func fetchExchanges(forceRefresh: Bool) async throws -> ExchangeGroup {
         let exchangeResponse = try await service.fetchExchanges(forceRefresh: forceRefresh)
         return mapper.map(exchangeResponse)
     }

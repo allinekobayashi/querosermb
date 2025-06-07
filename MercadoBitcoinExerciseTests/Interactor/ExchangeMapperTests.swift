@@ -16,19 +16,21 @@ final class ExchangeMapperTests: XCTestCase {
             volume1mthUsd: 167892044603.54
         )]
         
-        guard let result = mapper.map(response).first else {
+        let result = mapper.map(response)
+        
+        guard let exchange = result.exchanges.first else {
             XCTFail("Mapping failed")
             return
         }
         
-        XCTAssertEqual(result.name, "Binance")
-        XCTAssertEqual(result.id, "BINANCE")
-        XCTAssertEqual(result.website, "https://www.binance.com/")
-        XCTAssertTrue(result.isActive)
-        XCTAssertEqual(result.volumes.count, 3)
-        XCTAssertTrue(result.volumes.contains { $0.period == .hour && $0.volume == 256938679.43 })
-        XCTAssertTrue(result.volumes.contains { $0.period == .day && $0.volume == 5734568954.76 })
-        XCTAssertTrue(result.volumes.contains { $0.period == .month && $0.volume == 167892044603.54 })
+        XCTAssertEqual(exchange.name, "Binance")
+        XCTAssertEqual(exchange.id, "BINANCE")
+        XCTAssertEqual(exchange.website, "https://www.binance.com/")
+        XCTAssertTrue(exchange.isActive)
+        XCTAssertEqual(exchange.volumes.count, 3)
+        XCTAssertTrue(exchange.volumes.contains { $0.period == .hour && $0.volume == 256938679.43 })
+        XCTAssertTrue(exchange.volumes.contains { $0.period == .day && $0.volume == 5734568954.76 })
+        XCTAssertTrue(exchange.volumes.contains { $0.period == .month && $0.volume == 167892044603.54 })
     }
 
     func testMap_GivenOnlyHourVolumeAndInactive_WhenMap_ThenOnlyHourVolumeAndInactiveMapped() {
@@ -44,18 +46,20 @@ final class ExchangeMapperTests: XCTestCase {
             volume1mthUsd: nil
         )]
         
-        guard let result = mapper.map(response).first else {
+        let result = mapper.map(response)
+        
+        guard let exchange = result.exchanges.first else {
             XCTFail("Mapping failed")
             return
         }
         
-        XCTAssertEqual(result.name, "Coinbase Pro")
-        XCTAssertEqual(result.id, "COINBASE")
-        XCTAssertEqual(result.website, "https://pro.coinbase.com/")
-        XCTAssertFalse(result.isActive)
-        XCTAssertEqual(result.volumes.count, 1)
-        XCTAssertEqual(result.volumes.first?.period, .hour)
-        XCTAssertEqual(result.volumes.first?.volume, 162753954.21)
+        XCTAssertEqual(exchange.name, "Coinbase Pro")
+        XCTAssertEqual(exchange.id, "COINBASE")
+        XCTAssertEqual(exchange.website, "https://pro.coinbase.com/")
+        XCTAssertFalse(exchange.isActive)
+        XCTAssertEqual(exchange.volumes.count, 1)
+        XCTAssertEqual(exchange.volumes.first?.period, .hour)
+        XCTAssertEqual(exchange.volumes.first?.volume, 162753954.21)
     }
 
     func testMap_GivenNoVolumesPresent_WhenMap_ThenNoVolumesAndActiveMapped() {
@@ -71,16 +75,18 @@ final class ExchangeMapperTests: XCTestCase {
             volume1mthUsd: nil
         )]
         
-        guard let result = mapper.map(response).first else {
+        let result = mapper.map(response)
+        
+        guard let exchange = result.exchanges.first else {
             XCTFail("Mapping failed")
             return
         }
         
-        XCTAssertEqual(result.name, "Kraken")
-        XCTAssertEqual(result.id, "KRAKEN")
-        XCTAssertNil(result.website)
-        XCTAssertTrue(result.isActive)
-        XCTAssertTrue(result.volumes.isEmpty)
+        XCTAssertEqual(exchange.name, "Kraken")
+        XCTAssertEqual(exchange.id, "KRAKEN")
+        XCTAssertNil(exchange.website)
+        XCTAssertTrue(exchange.isActive)
+        XCTAssertTrue(exchange.volumes.isEmpty)
     }
 
 }

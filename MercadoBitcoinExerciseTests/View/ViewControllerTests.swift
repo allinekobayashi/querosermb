@@ -5,7 +5,7 @@ import UIKit
 
 final class ViewControllerTests: XCTestCase {
     func testView_snapshot() {
-        let viewModel = [
+        let exchanges = [
             ExchangeViewModel(
                 id: "1",
                 name: "Binance",
@@ -35,6 +35,8 @@ final class ViewControllerTests: XCTestCase {
                 volumes: ["792.77M USD (per hour)", "15.36B USD (per day)"]
             )
         ]
+        
+        let viewModel = ExchangeListViewModel(lastUpdated: "Last updated: 07/06/2025, 10:37", exchanges: exchanges)
         
         let mockPresenter = MockExchangePresenter()
         let viewController = ViewController(presenter: mockPresenter)

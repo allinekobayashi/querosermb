@@ -7,7 +7,7 @@ final class MockExchangesView: UIViewController, ExchangesViewProtocol {
     var showExchangesCalled = false
     var showErrorCalled = false
     
-    var exchangesPassed: [ExchangeViewModel]?
+    var viewModelPassed: ExchangeListViewModel?
     var errorMessagePassed: String?
     
     func showLoading() {
@@ -18,9 +18,9 @@ final class MockExchangesView: UIViewController, ExchangesViewProtocol {
         hideLoadingCalled = true
     }
     
-    func showExchanges(_ exchanges: [ExchangeViewModel]) {
+    func showExchanges(_ viewModel: ExchangeListViewModel) {
         showExchangesCalled = true
-        exchangesPassed = exchanges
+        viewModelPassed = viewModel
     }
     
     func showError(_ message: String) {

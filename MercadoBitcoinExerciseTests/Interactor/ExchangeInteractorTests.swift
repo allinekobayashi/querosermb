@@ -7,17 +7,21 @@ class ExchangeInteractorTests: XCTestCase {
         let response = MockExchangesResponse().build()
         mockService.result = .success(response)
         let mockMapper = MockExchangeMapper()
-        mockMapper.result = MockExchanges().build()
+        mockMapper.result = ExchangeGroup(
+            lastUpdated: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 7))!,
+            exchanges: MockExchanges().build()
+        )
         
         let interactor = ExchangeInteractor(service: mockService, mapper: mockMapper)
         
-        let exchanges = try await interactor.fetchExchanges(forceRefresh: true)
+        let exchangeGroup = try await interactor.fetchExchanges(forceRefresh: true)
         
         XCTAssertTrue(mockService.fetchExchangesCalled)
         XCTAssertTrue(mockMapper.mapCalled)
         XCTAssertEqual(mockMapper.lastResponse, response)
         
-        XCTAssertEqual(exchanges, mockMapper.result)
+        XCTAssertEqual(exchangeGroup.exchanges, mockMapper.result?.exchanges)
+        XCTAssertEqual(exchangeGroup.lastUpdated, mockMapper.result?.lastUpdated)
     }
 
     func testFetchExchanges_GivenServiceThrowsError_WhenFetchExchanges_ThenThrowsError() async {

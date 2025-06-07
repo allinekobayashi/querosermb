@@ -5,3 +5,8 @@ struct ExchangeViewModel: Identifiable, Equatable {
     let status: String
     let volumes: [String]
 }
+
+struct ExchangeListViewModel: Equatable {
+    let lastUpdated: String
+    let exchanges: [ExchangeViewModel]
+}

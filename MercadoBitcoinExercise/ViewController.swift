@@ -3,7 +3,7 @@ import UIKit
 protocol ExchangesViewProtocol: AnyObject {
     func showLoading()
     func hideLoading()
-    func showExchanges(_ exchanges: [ExchangeViewModel])
+    func showExchanges(_ viewModel: ExchangeListViewModel)
     func showError(_ message: String)
 }
 
@@ -28,6 +28,15 @@ final class ViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.isHidden = true
         return view
+    }()
+    
+    private let lastUpdatedLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.systemFont(ofSize: 12)
+        label.textColor = .secondaryLabel
+        label.textAlignment = .center
+        return label
     }()
     
     private var exchanges: [ExchangeViewModel] = []
@@ -56,10 +65,15 @@ final class ViewController: UIViewController {
         view.addSubview(tableView)
         view.addSubview(loadingIndicator)
         view.addSubview(errorView)
+        view.addSubview(lastUpdatedLabel)
         view.backgroundColor = .systemBackground
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            lastUpdatedLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            lastUpdatedLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            lastUpdatedLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            tableView.topAnchor.constraint(equalTo: lastUpdatedLabel.bottomAnchor, constant: 16.0),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -100,8 +114,9 @@ extension ViewController: ExchangesViewProtocol {
     }
     
     
-    func showExchanges(_ exchanges: [ExchangeViewModel]) {
-        self.exchanges = exchanges
+    func showExchanges(_ viewModel: ExchangeListViewModel) {
+        self.exchanges = viewModel.exchanges
+        lastUpdatedLabel.text = viewModel.lastUpdated
         tableView.reloadData()
         tableView.refreshControl?.endRefreshing()
         loadingIndicator.stopAnimating()

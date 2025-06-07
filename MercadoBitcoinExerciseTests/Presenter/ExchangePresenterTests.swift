@@ -8,15 +8,23 @@ final class ExchangePresenterTests: XCTestCase {
     private var mockInteractor: MockExchangeInteractor!
     private var mockMapper: MockExchangeViewModelMapper!
     
-    private let expectedExchanges = [
-        ExchangeViewModel(
-            id: "test-id",
-            name: "Test Exchange",
-            website: "https://test.com",
-            status: "Active",
-            volumes: ["100 USD per day"]
-        )
-    ]
+    private let expectedExchanges = ExchangeListViewModel(
+        lastUpdated: "07/06/2025, 10:37",
+        exchanges: [
+            ExchangeViewModel(
+                id: "test-id",
+                name: "Test Exchange",
+                website: "https://test.com",
+                status: "Active",
+                volumes: ["100 USD per day"]
+            )
+        ]
+    )
+    
+    private let mockExchanges = ExchangeGroup(
+        lastUpdated: Calendar.current.date(from: DateComponents(year: 2025, month: 6, day: 7)) ?? Date(),
+        exchanges: MockExchanges().build()
+    )
     
     override func setUp() {
         super.setUp()
@@ -61,6 +69,7 @@ final class ExchangePresenterTests: XCTestCase {
     
     func testViewDidLoadGivenPresenterWhenViewDidLoadThenShowLoadingAndFetchExchanges() async {
         mockMapper.mockMappedExchanges = expectedExchanges
+        mockInteractor.mockExchanges = mockExchanges
         
         presenter.viewDidLoad()
         try? await Task.sleep(nanoseconds: 100_000_000)
@@ -69,13 +78,14 @@ final class ExchangePresenterTests: XCTestCase {
             XCTAssertTrue(mockView.showLoadingCalled)
             XCTAssertTrue(mockInteractor.fetchExchangesCalled)
             XCTAssertEqual(mockInteractor.forceRefresh, false)
-            XCTAssertEqual(mockView.exchangesPassed, expectedExchanges)
+            XCTAssertEqual(mockView.viewModelPassed, expectedExchanges)
             XCTAssertTrue(mockView.showExchangesCalled)
         }
     }
     
     func testPullToRefreshGivenPresenterWhenPullToRefreshThenFetchExchangesWithForceRefresh() async {
         mockMapper.mockMappedExchanges = expectedExchanges
+        mockInteractor.mockExchanges = mockExchanges
         
         presenter.pullToRefresh()
         try? await Task.sleep(nanoseconds: 100_000_000)
@@ -84,13 +94,14 @@ final class ExchangePresenterTests: XCTestCase {
             XCTAssertFalse(mockView.showLoadingCalled)
             XCTAssertTrue(mockInteractor.fetchExchangesCalled)
             XCTAssertEqual(mockInteractor.forceRefresh, true)
-            XCTAssertEqual(mockView.exchangesPassed, expectedExchanges)
+            XCTAssertEqual(mockView.viewModelPassed, expectedExchanges)
             XCTAssertTrue(mockView.showExchangesCalled)
         }
     }
     
     func testOnRetryGivenPresenterWhenOnRetryThenShowLoadingAndFetchExchanges() async {
         mockMapper.mockMappedExchanges = expectedExchanges
+        mockInteractor.mockExchanges = mockExchanges
         
         presenter.onRetry()
         try? await Task.sleep(nanoseconds: 100_000_000)
@@ -99,7 +110,7 @@ final class ExchangePresenterTests: XCTestCase {
             XCTAssertTrue(mockView.showLoadingCalled)
             XCTAssertTrue(mockInteractor.fetchExchangesCalled)
             XCTAssertEqual(mockInteractor.forceRefresh, false)
-            XCTAssertEqual(mockView.exchangesPassed, expectedExchanges)
+            XCTAssertEqual(mockView.viewModelPassed, expectedExchanges)
             XCTAssertTrue(mockView.showExchangesCalled)
         }
     }

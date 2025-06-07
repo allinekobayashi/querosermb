@@ -19,4 +19,8 @@ struct Exchange: Identifiable, Equatable {
     let isActive: Bool
     let volumes: [ExchangeVolume]
 }
-    
+
+struct ExchangeGroup: Equatable {
+    let lastUpdated: Date
+    let exchanges: [Exchange]
+}

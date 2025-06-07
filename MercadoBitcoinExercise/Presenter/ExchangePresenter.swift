@@ -56,9 +56,9 @@ final class ExchangePresenter: ExchangePresenterProtocol {
     private func fetchExchanges(forceRefresh: Bool = false) {
         Task {
             do {
-                let exchanges = try await interactor.fetchExchanges(forceRefresh: forceRefresh)
+                let exchangeGroup = try await interactor.fetchExchanges(forceRefresh: forceRefresh)
                 await MainActor.run {
-                    view?.showExchanges(mapper.map(exchanges))
+                    view?.showExchanges(mapper.map(exchangeGroup))
                 }
             } catch {
                 await MainActor.run {

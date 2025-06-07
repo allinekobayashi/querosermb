@@ -1,13 +1,15 @@
 import Foundation
 
 protocol ExchangeMapperProtocol {
-    func map(_ response: [ExchangeResponse]) -> [Exchange]
+    func map(_ response: [ExchangeResponse]) -> ExchangeGroup
 }
 
 final class ExchangeMapper: ExchangeMapperProtocol {
-    func map(_ response: [ExchangeResponse]) -> [Exchange] {
-        return response.compactMap(mapEachExchange)
-            
+    func map(_ response: [ExchangeResponse]) -> ExchangeGroup {
+        return ExchangeGroup(
+            lastUpdated: Date(),
+            exchanges: response.compactMap(mapEachExchange)
+        )
     }
     
     private func mapEachExchange(_ exchangeResponse: ExchangeResponse) -> Exchange {

@@ -1,12 +1,12 @@
 import Foundation
 
 protocol ExchangeViewModelMapperProtocol {
-    func map(_ exchanges: [Exchange]) -> [ExchangeViewModel]
+    func map(_ exchanges: ExchangeGroup) -> ExchangeListViewModel
 }
 
 final class ExchangeViewModelMapper: ExchangeViewModelMapperProtocol {
-    func map(_ exchanges: [Exchange]) -> [ExchangeViewModel] {
-        exchanges.map { exchange in
+    func map(_ exchangeGroup: ExchangeGroup) -> ExchangeListViewModel {
+        let exchangesViewModel = exchangeGroup.exchanges.map { exchange in
             return ExchangeViewModel(
                 id: exchange.id,
                 name: exchange.name ?? exchange.id,
@@ -15,6 +15,16 @@ final class ExchangeViewModelMapper: ExchangeViewModelMapperProtocol {
                 volumes: exchange.volumes.map(formatVolume)
             )
         }
+        let lastUpdatedInfo = "Last updated: \(formatDate(exchangeGroup.lastUpdated))"
+        return .init(lastUpdated: lastUpdatedInfo, exchanges: exchangesViewModel)
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+
+        return formatter.string(from: date)
     }
     
     private func formatVolume(_ volume: ExchangeVolume) -> String {
